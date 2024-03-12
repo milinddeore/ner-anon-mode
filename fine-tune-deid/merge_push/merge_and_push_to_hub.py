@@ -23,7 +23,7 @@ tokenizer = AutoTokenizer.from_pretrained(base_model_path)
 model = model.merge_and_unload()
 
 hf_repo = "tomdeore/nonymus-llm"
-access_token = "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"
+access_token = "<YOUR HF SECRET>"
 
 args = TrainingArguments(push_to_hub=True, learning_rate=2e-4, output_dir="nonymus-llm")
 trainer = Trainer(model, args, tokenizer=tokenizer)
